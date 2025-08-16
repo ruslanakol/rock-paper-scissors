@@ -17,24 +17,27 @@
     </details>
 
 <div class="scores">
-    <div class="player-scores">
-        <p>Player scores: <span id="player-scores"></span></p>
-    </div>
-    <div class="computer-scores">
-        <p>Computer scores: <span id="computer-scores"></span></p>
-    </div>
+    <p class="player-p">Player scores: <span id="player-scores">0</span></p>
+    <p class="comp-p">Computer scores: <span id="computer-scores">0</span></p>
 </div>
 
     <h2>Choose the option: </h2>
 <div class="buttons">
-    <button id="rock">Rock</button>
-    <button id="paper">Paper</button>
-    <button id="scissors">Scissors</button>
+    <button id="rock">&#x1FAA8 Rock</button>
+    <button id="paper">&#x1F4C3 Paper</button>
+    <button id="scissors">&#x2702 Scissors</button>
 </div>
 <div class="results">
     <p id="results"></p>
 </div>
 
-<script src="index.js"></script>
+
+<div class="theme-changer-div">
+    <div class="first-layer"></div>
+    <div class="second-layer"></div>
+    <img id="theme-changer" class="theme-changer" src="img/palette.png" />
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>
