@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Small sweet game</title>
+</head>
+<body>
+<h1>Rock, Paper, Scissors!!</h1>
+    <details>
+        <summary>Rules of the game</summary>
+        <p class="sum-p">Two players simultaneously choose one of three hand gestures: rock, paper, or scissors.</p>
+        <p class="sum-p">Rock crushes scissors, scissors cut paper, and paper covers rock.</p>
+        <p class="sum-p">If both players choose the same gesture, it's a tie, and they play again.</p>
+        <p class="sum-p">The first player to win two out of three rounds wins the game. </p>
+    </details>
+
+<div class="scores">
+    <div class="player-scores">
+        <p>Player scores: <span id="player-scores"></span></p>
+    </div>
+    <div class="computer-scores">
+        <p>Computer scores: <span id="computer-scores"></span></p>
+    </div>
+</div>
+
+    <h2>Choose the option: </h2>
+<div class="buttons">
+    <button id="rock">Rock</button>
+    <button id="paper">Paper</button>
+    <button id="scissors">Scissors</button>
+</div>
+<div class="results">
+    <p id="results"></p>
+</div>
+
+<script src="index.js"></script>
+</body>
+</html>
