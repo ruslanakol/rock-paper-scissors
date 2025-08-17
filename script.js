@@ -5,8 +5,40 @@ const button = document.querySelector('button');
 const rockBtn = document.getElementById('rock');
 const scissorsBtn = document.getElementById('scissors');
 const paperBtn = document.getElementById('paper');
+// logic for game
 
+function getRandomComputerResults() {
+    const array = ["Rock", "Scissors", "Paper"];
+    const randomIndex = Math.floor(Math.random() * array.length);
+    return array[randomIndex];
+}
+function hasPlayerWonTheRound(player, computer) {
+    return (
+        (player === "Rock" && computer === "Scissors") ||
+        (player === "Scissors" && computer === "Paper") ||
+        (player === "Paper" && computer === "Rock")
+    );
+}
 
+let playerScore = 0;
+let computerScore = 0;
+
+function getRoundResults(userOption) {
+    const computerResult = getRandomComputerResults();
+
+    if (hasPlayerWonTheRound(userOption, computerResult)) {
+        playerScore++;
+        return `Player wins! ${userOption} beats ${computerResult}`;
+    } else if (computerResult === userOption) {
+        return `It's a tie! Both chose ${userOption}`;
+    } else {
+        computerScore++;
+        return `Computer wins! ${computerResult} beats ${userOption}`;
+    }
+}
+const playerScores = document.querySelectorAll('.player-scores');
+const computerScores = document.querySelectorAll('.computer-scores');
+const results = document.querySelectorAll('.results');
 
 
 // theme changes
